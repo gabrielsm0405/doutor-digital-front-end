@@ -1,10 +1,13 @@
 <template>
   <v-container fluid class="primary">
     <v-row class="my-10 px-5" align="center" justify="center">
-      <v-icon size="100" color="black">fas fa-stethoscope</v-icon>
-      <div class="ml-5 text-h3 font-weight-black text-break text-center">
-        DOUTOR INTELIGENTE
-      </div>
+      <v-img
+        src="../assets/logo.png"
+        contain
+        max-width="100"
+        max-height="100"
+      />
+      <div class="ml-5 text-h3 text-break text-center">HEALTH CLOUD</div>
     </v-row>
 
     <v-card class="mx-auto pa-10 rounded-tr-xl" max-width="700">

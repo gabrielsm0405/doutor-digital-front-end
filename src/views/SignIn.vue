@@ -2,13 +2,16 @@
   <v-container fill-height fluid class="primary">
     <v-card class="mx-auto pa-7 rounded-xl" width="500">
       <v-card-title>
-        <v-row
-          class="text-h3 mb-2 text-break text-center font-weight-black"
-          justify="center"
-          >DOUTOR INTELIGENTE</v-row
-        >
+        <v-row class="text-h3 mb-2 text-break text-center" justify="center">
+          HEALTH CLOUD
+        </v-row>
         <v-row justify="center">
-          <v-icon size="150" color="black">fas fa-stethoscope</v-icon>
+          <v-img
+            src="../assets/logo.png"
+            contain
+            max-width="200"
+            max-height="200"
+          />
         </v-row>
       </v-card-title>
 
