@@ -27,6 +27,7 @@
             clearable
             clear-icon="fas fa-times"
             color="secondary"
+            prepend-icon="fas fa-key"
           ></v-text-field>
 
           <v-file-input
