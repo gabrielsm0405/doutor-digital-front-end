@@ -9,17 +9,13 @@ import store from "../store";
 Vue.use(VueRouter);
 
 const requireAuthenticated = (to, from, next) => {
-  store.dispatch("auth/initialize").then(() => {
-    if (!store.getters["auth/isAuthenticated"]) next("/signin");
-    else next();
-  });
+  if (!store.getters["auth/isAuthenticated"]) next("/signin");
+  else next();
 };
 
 const requireUnauthenticated = (to, from, next) => {
-  store.dispatch("auth/initialize").then(() => {
-    if (!store.getters["auth/isAuthenticated"]) next();
-    else next("/home");
-  });
+  if (!store.getters["auth/isAuthenticated"]) next();
+  else next("/home");
 };
 
 const routes = [

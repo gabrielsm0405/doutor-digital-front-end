@@ -11,12 +11,12 @@
     </v-row>
 
     <v-card class="mx-auto pa-10 rounded-tr-xl" max-width="700">
-      <v-card v-for="(inference, i) in inferences" :key="i" class="my-5">
+      <v-card v-for="(inference, i) in response" :key="i" class="my-5">
         <v-row align="center" justify="center" class="ma-0">
-          <v-col sm="8" cols="12">
-            <v-img src="../assets/heatmap.png" contain max-height="400" />
+          <v-col sm="7" cols="12">
+            <v-img :src="inference.heatmap_link" contain max-height="400" />
           </v-col>
-          <v-col sm="4" cols="12">
+          <v-col sm="5" cols="12">
             <v-row
               class="text-h5 font-weight-black text-break"
               justify="center"
@@ -24,7 +24,7 @@
               {{ inference.pathology }}
             </v-row>
             <v-row justify="center" class="mb-5"
-              >({{ inference.probability * 100 }}%)</v-row
+              >({{ (inference.prediction * 100).toFixed(2) }}%)</v-row
             >
           </v-col>
         </v-row>
@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 import ConfirmationBox from "../components/ConfirmationBox.vue";
 import MailForm from "../components/MailForm.vue";
 
@@ -88,6 +88,9 @@ export default {
     backConfirmation: false,
     openEmailForm: false,
   }),
+  computed: {
+    ...mapState("inference", ["response"]),
+  },
   components: {
     ConfirmationBox,
     MailForm,

@@ -1,5 +1,3 @@
-const TOKEN_STORAGE_KEY = "KNJNkjnkjnLKNLKnln12182";
-
 const getters = { isAuthenticated: (state) => !!state.token };
 
 const initialState = {
@@ -7,11 +5,8 @@ const initialState = {
 };
 
 const actions = {
-  initialize({ commit }) {
-    const token = localStorage.getItem(TOKEN_STORAGE_KEY);
-
-    if (token) commit("SET_TOKEN", token);
-    else commit("REMOVE_TOKEN");
+  login({ commit }, token) {
+    commit("SET_TOKEN", token);
   },
   signout({ commit }) {
     commit("REMOVE_TOKEN");
@@ -20,13 +15,9 @@ const actions = {
 
 const mutations = {
   ["SET_TOKEN"](state, token) {
-    localStorage.setItem(TOKEN_STORAGE_KEY, token);
-
     state.token = token;
   },
   ["REMOVE_TOKEN"](state) {
-    localStorage.removeItem(TOKEN_STORAGE_KEY);
-
     state.token = null;
   },
 };

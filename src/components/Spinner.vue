@@ -9,7 +9,7 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState("loading"),
+    ...mapState(["loading"]),
   },
 };
 </script>

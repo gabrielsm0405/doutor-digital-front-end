@@ -9,10 +9,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     loading: false,
+    alertMessage: "",
   },
   mutations: {
     ["LOADING"](state, loadingState) {
       state.loading = loadingState;
+    },
+    ["ALERT"](state, message) {
+      state.alertMessage = message;
+      setTimeout(() => (state.alertMessage = ""), 100);
     },
   },
   actions: {},
