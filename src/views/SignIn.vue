@@ -2,15 +2,15 @@
   <v-container fill-height fluid class="primary">
     <v-card class="mx-auto pa-7 rounded-xl" width="500">
       <v-card-title>
-        <v-row class="text-h3 mb-2 text-break text-center" justify="center">
-          HEALTH CLOUD
+        <v-row class="text-h4 mb-2 text-break text-center" justify="center">
+          DOUTOR INTELIGENTE
         </v-row>
         <v-row justify="center">
           <v-img
             src="../assets/logo.png"
             contain
-            max-width="200"
-            max-height="200"
+            max-width="150"
+            max-height="150"
           />
         </v-row>
       </v-card-title>
