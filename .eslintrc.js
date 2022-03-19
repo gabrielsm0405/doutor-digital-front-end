@@ -14,7 +14,8 @@ module.exports = {
       "error",
       {
         endOfLine: "auto",
-      },
+      }
     ],
   },
+  "plugins": ["only-warn"]
 };

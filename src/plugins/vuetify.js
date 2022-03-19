@@ -21,5 +21,5 @@ export default new Vuetify({
         secondary: "#000000",
       },
     },
-  },
+  }
 });

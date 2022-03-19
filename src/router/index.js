@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import Home from "../views/Home.vue";
 import SignIn from "../views/SignIn.vue";
+import AboutUs from "../views/AboutUs.vue";
 
 import store from "../store";
 
@@ -34,6 +35,11 @@ const routes = [
     name: "SignIn",
     component: SignIn,
     beforeEnter: requireUnauthenticated,
+  },
+  {
+    path: "/aboutUs",
+    name: "AboutUs",
+    component: AboutUs,
   },
 ];
 

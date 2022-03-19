@@ -70,6 +70,12 @@
           />
         </v-col>
       </v-row>
+
+      <v-row justify="center">
+        <v-btn text color="text--primary" @click="$router.push('/aboutUs')">
+          Sobre nós
+        </v-btn>
+      </v-row>
     </v-card>
   </v-container>
 </template>
